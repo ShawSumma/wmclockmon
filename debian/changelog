@@ -1,3 +1,58 @@
+wmclockmon (0.8.0-2) unstable; urgency=low
+
+  * debian/control: Added libxt-dev to make the damn thing build. (Closes:
+    #256421)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 27 Jun 2004 22:36:54 +0200
+
+wmclockmon (0.8.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: I'm a DD.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Thu,  3 Jun 2004 20:24:21 +0200
+
+wmclockmon (0.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Tue,  9 Mar 2004 17:28:39 +0100
+
+wmclockmon (0.7.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: New xlib packaging, change build-depends.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Mon,  1 Mar 2004 00:23:58 +0100
+
+wmclockmon (0.7.0-1) unstable; urgency=low
+
+  * New upstream release: Now also provides a binary clock (this seems to be
+    a needed feature atm)
+  * debian/watch: Added, upstream releases fast :)
+  * debian/menu: Added quotes to make new lintian happy. 
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Thu, 26 Feb 2004 13:51:24 +0100
+
+wmclockmon (0.6.2-1) unstable; urgency=low
+
+  * Yet another new upstream release.
+
+ -- Marc Brockschmidt <marc@dch-faq.de>  Sat, 14 Feb 2004 12:20:44 +0100
+
+wmclockmon (0.6.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules: Some small changes to get the nostrip thing working.
+
+ -- Marc Brockschmidt <marc@dch-faq.de>  Wed, 11 Feb 2004 20:28:13 +0100
+
+wmclockmon (0.5.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Marc Brockschmidt <marc@dch-faq.de>  Sun,  7 Dec 2003 16:09:49 +0100
+
 wmclockmon (0.5.0-1) unstable; urgency=low
 
   * New upstream release:

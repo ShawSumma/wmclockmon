@@ -167,7 +167,7 @@ static void editor_flush() {
 
 
 static void editor_fill(int which) {
-    char *filename, *dstr;
+    char *dstr;
     GtkWidget *label;
 
     switch (which) {
