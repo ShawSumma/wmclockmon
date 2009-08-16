@@ -2,8 +2,8 @@ Source: wmclockmon
 Section: x11
 Priority: optional
 Maintainer: Marc 'HE' Brockschmidt <he@debian.org>
-Build-Depends: libglib1.2-dev, libgtk1.2-dev, libx11-dev | xlibs-dev (>> 4.1.0), libxext-dev | xlibs-dev (>> 4.1.0), libxi-dev | xlibs-dev (>> 4.1.0), libxpm-dev | xlibs-dev (>> 4.1.0), libxt-dev | xlibs-dev (>> 4.1.0), debhelper (>= 4)
-Standards-Version: 3.6.1
+Build-Depends: libgtk2.0-dev, libx11-dev | xlibs-dev (>> 4.1.0), libxext-dev | xlibs-dev (>> 4.1.0), libxi-dev | xlibs-dev (>> 4.1.0), libxpm-dev | xlibs-dev (>> 4.1.0), libxt-dev | xlibs-dev (>> 4.1.0), debhelper (>= 7), autotools-dev
+Standards-Version: 3.8.3
 
 Package: wmclockmon
 Architecture: any

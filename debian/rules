@@ -12,6 +12,14 @@ endif
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
+	if [ -r /usr/share/misc/config.sub ]; then\
+		mv $(CURDIR)/config.sub $(CURDIR)/config.sub.backup;\
+		cp /usr/share/misc/config.sub $(CURDIR)/config.sub;\
+	fi
+	if [ -r /usr/share/misc/config.guess ]; then\
+		mv $(CURDIR)/config.guess $(CURDIR)/config.guess.backup;\
+		cp /usr/share/misc/config.guess $(CURDIR)/config.guess;\
+	fi
 	CFLAGS="$(CFLAGS)" ./configure --prefix=/usr --mandir=/usr/share/man
 	touch configure-stamp
 
@@ -25,7 +33,13 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp install-stamp configure-stamp
-	-$(MAKE) maintainer-clean
+	[ ! -f Makefile ] || $(MAKE) maintainer-clean
+	if [ -r $(CURDIR)/config.sub.backup ]; then\
+		mv $(CURDIR)/config.sub.backup $(CURDIR)/config.sub;\
+	fi
+	if [ -r $(CURDIR)/config.guess.backup ]; then\
+		mv $(CURDIR)/config.guess.backup $(CURDIR)/config.guess;\
+	fi
 	rm -f config.h config.log config.status stamp-h Makefile src/Makefile doc/Makefile wmclockmon-config/Makefile wmclockmon-cal/Makefile
 	dh_clean
 
@@ -33,7 +47,7 @@ install: install-stamp
 install-stamp: build-stamp
 	dh_testdir
 	dh_testroot
-	dh_clean -k
+	dh_prep
 	$(MAKE) install DESTDIR=$(TMP)
 	touch install-stamp
 
@@ -50,9 +64,7 @@ binary-arch: build install
 	dh_installmenu
 	dh_installmanpages
 	dh_installchangelogs ChangeLog
-ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
-endif
 	dh_compress
 	dh_fixperms
 	dh_installdeb

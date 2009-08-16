@@ -1,3 +1,11 @@
+2005-04-07
+    * released version 0.8.1
+    * fixed a bug in configuration loading
+
+2005-02-06
+    * changed the way the dockapp is created so that the binary name is used
+      for the app properties (Nathan Mahon)
+
 2004-05-31
     * released version 0.8.0
     * added monitoring of new calendar files
@@ -56,7 +64,7 @@
     * fixed a bug in default background
 
 2004-01-18
-    * added label option (John McKerrell <john@mckerrell.net>)
+    * added label option (John McKerrel)
 
 2004-01-12
     * added netbsd to supported platforms
@@ -109,7 +117,7 @@
     * updated manpage
 
 2003-09-20
-    * added new LED looks (Noberasco Michele <noberasco.gnu@disi.unige.it>)
+    * added new LED looks (Noberasco Michele)
     * fixed a bug in -lc option's argument loading (Noberasco Michele)
 
 2003-09-02

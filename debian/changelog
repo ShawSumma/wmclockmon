@@ -1,3 +1,23 @@
+wmclockmon (0.8.1-2) unstable; urgency=low
+
+  * Port to Gtk+ 2, patch provided by Julien BLACHE <jblache@debian.org> -
+    Thanks! (Closes: #437442, #527784)
+  * Fix configure.ac to correctly handle kfreebsd (not only freebsd), patch
+    provided by Pierre Chifflier <chifflier@cpe.fr>. (Closes: #376735)
+  * Fixed packaging to drag in fresh config.{sub,guess} at every build.
+    (Closes: #355731)
+  * Updated to debhelper 7 and policy 3.8.3.
+  * Squashed several lintian warnings (doing the menu transition on the way)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 16 Aug 2009 13:05:34 +0200
+
+wmclockmon (0.8.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * src/main.c,wmclockmon-cal: Fixed some compilation warnings.
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Wed, 15 Jun 2005 16:06:12 +0200
+
 wmclockmon (0.8.0-2) unstable; urgency=low
 
   * debian/control: Added libxt-dev to make the damn thing build. (Closes:
