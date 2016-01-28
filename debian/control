@@ -11,7 +11,8 @@ Build-Depends: autotools-dev,
                libxext-dev,
                libxi-dev,
                libxpm-dev,
-               libxt-dev
+               libxt-dev,
+               pkg-config
 Standards-Version: 3.9.7
 
 Package: wmclockmon
