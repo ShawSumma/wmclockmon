@@ -51,6 +51,7 @@ static void show_editor() {
     gtk_widget_hide(calendar);
     gtk_widget_hide(closewindow);
     gtk_widget_grab_default(GTK_WIDGET(cancel));
+    gtk_widget_draw_default(GTK_WIDGET(cancel));
     gtk_widget_grab_focus(GTK_WIDGET(edit));
     gtk_widget_show(text_buttons);
     gtk_widget_show(edit);
@@ -68,6 +69,7 @@ static void hide_editor() {
     gtk_widget_hide(cancel);
     gtk_widget_show(calendar);
     gtk_widget_grab_default(GTK_WIDGET(closewindow));
+    gtk_widget_draw_default(GTK_WIDGET(closewindow));
     gtk_widget_grab_focus(GTK_WIDGET(closewindow));
     gtk_widget_show(closewindow);
 }
@@ -91,20 +93,13 @@ static void load_file(const char *datestr) {
     FILE *file;
     char *filename = get_file(datestr);
 
-    GtkTextIter iter;
-    GtkTextBuffer *buf;
-
-    buf = GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit)));
-    gtk_text_buffer_get_end_iter(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))), &iter);
-    gtk_text_buffer_place_cursor(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))), &iter);
-
     if ((file = fopen(filename, "r")) != NULL) {
         while (! feof(file)) {
             char line[MAXSTRLEN + 1];
             bzero(line, MAXSTRLEN + 1);
             fgets(line, MAXSTRLEN, file);
             if (line[0] != 0)
-	      gtk_text_buffer_insert(buf, &iter, line, -1);
+                gtk_text_insert(GTK_TEXT(edit), NULL, NULL, NULL, line, -1);
         }
         fclose(file);
     }
@@ -133,7 +128,7 @@ static void toggle_buttons(int button) {
 
 
 static void to_button(int button) {
-    if (dateb == 0) dateb = button;
+    if (dateb == 0) dateb == button;
     if (button != dateb) {
         int b = dateb;
         dateb = button;
@@ -143,7 +138,7 @@ static void to_button(int button) {
 
 
 static void set_buttons_text() {
-    unsigned int  year, month, day;
+    int  year, month, day;
     char datestr[MAXSTRLEN + 1];
 
     bzero(datestr, MAXSTRLEN + 1);
@@ -159,14 +154,21 @@ static void set_buttons_text() {
 
 
 static void editor_flush() {
-  gtk_text_buffer_set_text(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))), "", 0);
+    int cont = TRUE;
+
+    while (cont) {
+       cont = gtk_text_backward_delete(GTK_TEXT(edit), 1);
+    }
+    cont = TRUE;
+    while (cont) {
+       cont = gtk_text_forward_delete(GTK_TEXT(edit), 1);
+    }
 }
 
 
 static void editor_fill(int which) {
-    char *dstr;
-    GtkWidget *label = NULL;
-    GtkTextIter iter;
+    char *filename, *dstr;
+    GtkWidget *label;
 
     switch (which) {
         case UNIQUE: label = label_u; break;
@@ -177,10 +179,11 @@ static void editor_fill(int which) {
     gtk_label_get(GTK_LABEL(label), &dstr);
     strcpy(daystr, dstr);
     to_button(which);
+    gtk_text_freeze(GTK_TEXT(edit));
     editor_flush();
     load_file(daystr);
-    gtk_text_buffer_get_end_iter(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))), &iter);
-    gtk_text_buffer_place_cursor(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))), &iter);
+    gtk_text_set_point(GTK_TEXT(edit), gtk_text_get_length(GTK_TEXT(edit)));
+    gtk_text_thaw(GTK_TEXT(edit));
 }
 
 
@@ -222,28 +225,23 @@ static void save_datas() {
     char *dirname  = xmalloc(len + 2);
     struct stat stat_buf;
 
-    GtkTextIter ts, te;
-    gchar *tbuf;
-    int tlen;
-
-    tlen = gtk_text_buffer_get_char_count(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))));
-    gtk_text_buffer_get_bounds(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))), &ts, &te);
-
     sprintf(dirname, "%s/%s", robust_home(), DEFAULT_CONFIGDIR);
-    if (tlen > 0) {
+    if (gtk_text_get_length(GTK_TEXT(edit)) > 0) {
         if (! ((stat(dirname, &stat_buf) == 0) && S_ISDIR(stat_buf.st_mode)))
             mkdir(dirname, 0755);
 
         if ((stat(dirname, &stat_buf) == 0) && S_ISDIR(stat_buf.st_mode)) {
             FILE *file = fopen(filename, "w");
-            unsigned int year, month, day;
+            int   year, month, day;
 
             if (file) {
-	      tbuf = gtk_text_buffer_get_text(GTK_TEXT_BUFFER(gtk_text_view_get_buffer(GTK_TEXT_VIEW(edit))), &ts, &te, TRUE);
-	      fprintf(file, "%s", tbuf);
-	      g_free(tbuf);
-	      fflush(file);
-	      fclose(file);
+                int i;
+                for (i = 0 ; i < gtk_text_get_length(GTK_TEXT(edit)) ; i++) {
+                    char t = GTK_TEXT_INDEX(GTK_TEXT(edit), i);
+                    fprintf(file, "%c", t);
+                }
+                fflush(file);
+                fclose(file);
             }
             gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
             gtk_calendar_mark_day(GTK_CALENDAR(calendar), day);
@@ -255,13 +253,15 @@ static void save_datas() {
 
 static void delete_file() {
     char *filename = get_file(daystr);
-    unsigned int year, month, day;
+    int   year, month, day;
 
     unlink(filename);
     gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
     gtk_calendar_unmark_day(GTK_CALENDAR(calendar), day);
     FREE(filename);
+    gtk_text_freeze(GTK_TEXT(edit));
     editor_flush();
+    gtk_text_thaw(GTK_TEXT(edit));
 }
 
 
@@ -293,7 +293,7 @@ static void mark_days() {
         char startstr_u[9]; /* unique (full date) */
         char startstr_y[9]; /* yearly date */
         char startstr_m[9]; /* monthly date */
-        unsigned int year, month, day;
+        int  year, month, day;
 
         gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
         month++;
@@ -357,10 +357,10 @@ void create_mainwindow() {
             GTK_SIGNAL_FUNC(mark_days), NULL);
     gtk_widget_show(calendar);
 
-    edit = gtk_text_view_new();
-    gtk_text_view_set_editable(GTK_TEXT_VIEW(edit), TRUE);
-    gtk_text_view_set_wrap_mode(GTK_TEXT_VIEW(edit), GTK_WRAP_WORD_CHAR);
-
+    edit = gtk_text_new(NULL, NULL);
+    gtk_text_set_editable(GTK_TEXT(edit), TRUE);
+    gtk_text_set_word_wrap(GTK_TEXT(edit), TRUE);
+    gtk_text_set_line_wrap(GTK_TEXT(edit), TRUE);
     gtk_box_pack_start(GTK_BOX(main_vbox), edit, TRUE, TRUE, 1);
 
 
@@ -413,6 +413,7 @@ void create_mainwindow() {
     gtk_box_pack_start(GTK_BOX(buttons_hbox), closewindow, TRUE, TRUE, 0);
     GTK_WIDGET_SET_FLAGS(GTK_WIDGET(closewindow), GTK_CAN_DEFAULT);
     gtk_widget_grab_default(GTK_WIDGET(closewindow));
+    gtk_widget_draw_default(GTK_WIDGET(closewindow));
     gtk_widget_show(closewindow);
 
 

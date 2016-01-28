@@ -98,7 +98,7 @@ linux*)
   ignore_buffers=yes
   ignore_cached=yes
   ;;
-[k]freebsd*)
+freebsd*)
   OS=freebsd
   ignore_wired=yes
   ignore_cached=yes
