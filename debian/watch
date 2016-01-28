@@ -1,3 +1,6 @@
-version=2
-
-http://tnemeth.free.fr/projets/programmes/wmclockmon-(.*)\.tar\.gz
+# Upstream webpage currently only lists an older version and the link is dead.
+# The following *may* work if upstream eventually updates their webpage.
+# ------------------------------------------------------------------------
+# version=3
+# http://tnemeth.free.fr/projets/dockapps.html \
+# programmes/wmclockmon-(.*)\.tar\.gz
