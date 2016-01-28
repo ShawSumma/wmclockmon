@@ -1,26 +1,65 @@
+wmclockmon (0.8.1-3) unstable; urgency=medium
+
+  * New maintainer (Debian Window Maker Team).
+  * Tidy up package using wrap-and-sort.
+  * debian/compat
+    - Bump to 9.
+  * debian/copyright
+    - Update to DEP5 format.
+  * debian/control
+    - Bump Standards-Version to 3.9.7.
+    - Add ${misc:Depends} to Depends.
+    - Add dh-autoreconf and pkg-config to Build-Depends.
+    - Remove autotools-dev and xlibs-dev from Build-Depends.
+    - Bump versioned dependency on debhelper to >= 9.
+    - Add Homepage and Vcs-* fields.
+  * debian/dirs
+    - Remove unnecessary file.
+  * debian/docs
+    - Remove empty file.
+  * debian/patches/{build_against_gtk2,kfreebsd_build}.patch
+    - Convert existing Debian patches to quilt.
+    - Link GTK+ libraries in the correct order, allowing --as-needed builds
+      (Closes: #641335).
+  * debian/patches/check_free.patch
+    - New patch; avoid crash if memory is freed without being allocated.
+  * debian/patches/fix_typos.patch
+    - New patch; fix typos pointed out by Lintian.
+  * debian/patches/update_autotools.patch
+    - New patch; a couple fixes allowing build to work with dh_autoreconf.
+  * debian/rules
+    - Use dh with dh_autoreconf.
+    - Enable all hardening flags.
+  * debian/source/format
+    - New file; use 3.0 (quilt).
+  * debian/watch
+    - Update with comment since upstream webpage is broken.
+
+ -- Doug Torrance <dtorrance@piedmont.edu>  Tue, 16 Feb 2016 23:34:59 -0500
+
 wmclockmon (0.8.1-2) unstable; urgency=low
 
   * Port to Gtk+ 2, patch provided by Julien BLACHE <jblache@debian.org> -
     Thanks! (Closes: #437442, #527784)
   * Fix configure.ac to correctly handle kfreebsd (not only freebsd), patch
     provided by Pierre Chifflier <chifflier@cpe.fr>. (Closes: #376735)
-  * Fixed packaging to drag in fresh config.{sub,guess} at every build.
+  * Fix packaging to drag in fresh config.{sub,guess} at every build.
     (Closes: #355731)
-  * Updated to debhelper 7 and policy 3.8.3.
-  * Squashed several lintian warnings (doing the menu transition on the way)
+  * Update to debhelper 7 and policy 3.8.3.
+  * Squash several lintian warnings (doing the menu transition on the way)
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 16 Aug 2009 13:05:34 +0200
 
 wmclockmon (0.8.1-1) unstable; urgency=low
 
   * New upstream release.
-  * src/main.c,wmclockmon-cal: Fixed some compilation warnings.
+  * src/main.c,wmclockmon-cal: Fix some compilation warnings.
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Wed, 15 Jun 2005 16:06:12 +0200
 
 wmclockmon (0.8.0-2) unstable; urgency=low
 
-  * debian/control: Added libxt-dev to make the damn thing build. (Closes:
+  * debian/control: Added lib-dev to make the damn thing build. (Closes:
     #256421)
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Sun, 27 Jun 2004 22:36:54 +0200
@@ -49,8 +88,8 @@ wmclockmon (0.7.0-1) unstable; urgency=low
 
   * New upstream release: Now also provides a binary clock (this seems to be
     a needed feature atm)
-  * debian/watch: Added, upstream releases fast :)
-  * debian/menu: Added quotes to make new lintian happy. 
+  * debian/watch: Add, upstream releases fast :)
+  * debian/menu: Add quotes to make new lintian happy.
 
  -- Marc 'HE' Brockschmidt <he@debian.org>  Thu, 26 Feb 2004 13:51:24 +0100
 
