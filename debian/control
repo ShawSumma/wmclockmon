@@ -11,7 +11,7 @@ Build-Depends: autotools-dev,
                libxi-dev,
                libxpm-dev,
                libxt-dev
-Standards-Version: 3.8.3
+Standards-Version: 3.9.7
 
 Package: wmclockmon
 Architecture: any
