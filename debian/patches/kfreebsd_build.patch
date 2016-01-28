@@ -1,0 +1,20 @@
+Description: Fix FTBFS on GNU/kFreeBSD
+ wmclockmon fails to build on kFreeBSD, mostly because the configure
+ script does not check the arch correctly.
+ .
+ Converted to quilt for version 0.8.1-3.
+Author: Pierre Chifflier <chifflier@cpe.fr>
+Bug-Debian: https://bugs.debian.org/376735
+Last-Update: 2016-01-27
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -98,7 +98,7 @@
+   ignore_buffers=yes
+   ignore_cached=yes
+   ;;
+-freebsd*)
++[k]freebsd*)
+   OS=freebsd
+   ignore_wired=yes
+   ignore_cached=yes
