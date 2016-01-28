@@ -3,8 +3,7 @@ Section: x11
 Priority: optional
 Maintainer: Debian Window Maker Team <pkg-wmaker-devel@lists.alioth.debian.org>
 Uploaders: Doug Torrance <dtorrance@piedmont.edu>
-Build-Depends: autotools-dev,
-               debhelper (>= 9),
+Build-Depends: debhelper (>= 9),
                dh-autoreconf,
                libgtk2.0-dev,
                libx11-dev,
