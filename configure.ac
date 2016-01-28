@@ -2,8 +2,8 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 
 dnl AC_INIT(src/main.c)
-dnl AM_INIT_AUTOMAKE(wmclockmon, 0.8.0)
-AC_INIT(wmclockmon, 0.8.0, tnemeth@free.fr)
+dnl AM_INIT_AUTOMAKE(wmclockmon, 0.8.1)
+AC_INIT(wmclockmon, 0.8.1, tnemeth@free.fr)
 AC_CANONICAL_HOST
 AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION)

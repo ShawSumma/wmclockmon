@@ -128,7 +128,7 @@ static void toggle_buttons(int button) {
 
 
 static void to_button(int button) {
-    if (dateb == 0) dateb == button;
+    if (dateb == 0) dateb = button;
     if (button != dateb) {
         int b = dateb;
         dateb = button;
@@ -138,7 +138,7 @@ static void to_button(int button) {
 
 
 static void set_buttons_text() {
-    int  year, month, day;
+    unsigned int  year, month, day;
     char datestr[MAXSTRLEN + 1];
 
     bzero(datestr, MAXSTRLEN + 1);
@@ -167,8 +167,8 @@ static void editor_flush() {
 
 
 static void editor_fill(int which) {
-    char *filename, *dstr;
-    GtkWidget *label;
+    char *dstr;
+    GtkWidget *label = NULL;
 
     switch (which) {
         case UNIQUE: label = label_u; break;
@@ -232,7 +232,7 @@ static void save_datas() {
 
         if ((stat(dirname, &stat_buf) == 0) && S_ISDIR(stat_buf.st_mode)) {
             FILE *file = fopen(filename, "w");
-            int   year, month, day;
+            unsigned int year, month, day;
 
             if (file) {
                 int i;
@@ -253,7 +253,7 @@ static void save_datas() {
 
 static void delete_file() {
     char *filename = get_file(daystr);
-    int   year, month, day;
+    unsigned int year, month, day;
 
     unlink(filename);
     gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
@@ -293,7 +293,7 @@ static void mark_days() {
         char startstr_u[9]; /* unique (full date) */
         char startstr_y[9]; /* yearly date */
         char startstr_m[9]; /* monthly date */
-        int  year, month, day;
+        unsigned int year, month, day;
 
         gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
         month++;
