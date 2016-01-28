@@ -1,0 +1,12 @@
+IBacklightOn = backlightI_on.xpm
+IBacklightOff = backlightI_off.xpm
+Beats_PosX = 20
+Beats_PosY = 6
+Beats_Big = Yes
+10thOB_PosX = 49
+10thOB_PosY = 28
+10thOB_Big = No
+10thOB_Display = Yes
+Graph_PosX = 6
+Graph_PosY = 45
+Graph_Display = Yes

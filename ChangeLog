@@ -1,0 +1,157 @@
+2004-05-31
+    * released version 0.8.0
+    * added monitoring of new calendar files
+    * updated doc
+
+2004-05-29
+    * added yearly and monthly entries management in wmclockmon-cal
+
+2004-03-25
+    * fixed wmclockmon-cal manpage typos
+
+2004-03-09
+    * released version 0.7.2
+    * added optional binary date in binary themes
+
+2004-02-26
+    * released version 0.7.1
+    * fixed a bug with modifiers
+    * added a binary clock style
+    * fixed a bug on binary clock
+    * updated the doc
+    * updated styles
+    * fixed a comment bug in the configuration file
+    * fixed a bug in calendar alarms reloading
+    * fixed a bug in alarms switching
+
+2004-02-25
+    * released version 0.7.0
+    * added binary clock
+
+2004-02-13
+    * released version 0.6.2
+    * fixed internet time bug
+    * fixed a bug in openning calendar at 00:00
+    * added a style
+
+2004-02-12
+    * released version 0.6.1
+    * fixed doc (Marc 'HE' Brockschmidt)
+    * fixed some warnings (Marc 'HE' Brockschmidt)
+    * fixed directory automatic creation 
+      (no more hand creation needed -- Marc 'HE' Brockschmidt)
+
+2004-02-11
+    * released version 0.6.0
+    * added wmclockmon-cal support in wmclockmon
+    * updated wmclockmon-config
+    * updated doc
+
+2004-02-10
+    * added wmclockmon-cal
+    * updated doc
+
+2004-02-09
+    * released version 0.5.3
+    * fixed a bug in default background
+
+2004-01-18
+    * added label option (John McKerrell <john@mckerrell.net>)
+
+2004-01-12
+    * added netbsd to supported platforms
+
+2003-12-08
+    * patched configure to work well with freebsd (Munish Chopra)
+
+2003-12-02
+    * released version 0.5.2
+    * fixed online help
+    * fixed a different behavior between BSDs and Linux to obtain the current
+      timezone
+
+2003-10-25
+    * released version 0.5.1
+    * several compilation warning fixes (Marc 'HE' Brockschmidt)
+    * added debian package creation directory (Marc 'HE' Brockschmidt)
+    * added a default style dir in the code
+
+2003-10-24
+    * released version 0.5.0
+    * added alarm messages
+    * fixed a bug in configuration tool about alarms creation
+    * fixed a bug in main.c about launching the configuration tool
+      if a alternate configuration file is given
+    * changed configuration tool's window-size
+
+2003-10-10
+    * released version 0.4.0
+    * fixed a bug acting on LED styles (Thanks for your magic Michele ;)
+
+2003-10-09
+    * added a styles subdir with a Makefile to install them
+
+2003-10-08
+    * added skin selection to configuration tool
+    * finished main.c
+    * updated the docs
+
+2003-10-07
+    * added skin code to main.c
+
+2003-09-26
+    * version 0.3.0 released
+    * added 4 more styles
+
+2003-09-22
+    * added internet time feature
+    * updated wmclockmon-config
+    * updated manpage
+
+2003-09-20
+    * added new LED looks (Noberasco Michele <noberasco.gnu@disi.unige.it>)
+    * fixed a bug in -lc option's argument loading (Noberasco Michele)
+
+2003-09-02
+    * fixed a bug in AM/PM display (Piers Kittel)
+
+2003-02-11
+    * version 0.2.2 released
+    * fixed a bug in setting light color with command-line
+    * changed behavior so that command-line options override config file
+      options
+    * added more doc
+
+2003-01-01
+    * version 0.2.1 released
+    * added the "don't use current locale" feature
+    * fixed man page
+
+2002-12-06
+    * version 0.2.0 released
+    * fixed a bug in alarm toggling
+    * added multiple alarms feature
+    * added the use if a configuration file
+    * added configuration tool
+    * fixed man page
+
+2002-10-05
+    * version 0.1.3 released
+    * bug fix in windowed mode
+
+2002-09-27
+    * version 0.1.2 released
+    * transformation of accentuated letters in non accentuated letters
+      for more localization
+
+2002-09-25
+    * version 0.1.1 released
+    * fixed a bug in 12h clock mode for midnight (Patrick Li)
+    * fixed man page
+
+2002-09-07
+    * version 0.1.0 released
+    * added styles
+
+2002-08-31
+    * Creation :)

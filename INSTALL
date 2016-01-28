@@ -1,0 +1,35 @@
+INSTALLING THE DOCKAPP :
+
+
+
+1. CONFIGURE THE SOURCES :
+
+    $ ./configure [options]
+
+    use ./configure --help for more informations on options.
+
+
+2. COMPILE THE SOURCES :
+
+    $ make
+
+
+3. INSTALL THE PROGRAM :
+
+    $ make install-strip
+
+    or, if you want a system-wide installation
+
+    $ su -c "make install-strip"
+
+
+4. INSTALL THE STYLE-FILES :
+
+    $ cp -r styles/ where/ever/you/want
+
+    or
+
+    $ su -c "cp -r styles/ where/ever/you/want"
+
+
+5. THAT'S ALL FOLKS :)

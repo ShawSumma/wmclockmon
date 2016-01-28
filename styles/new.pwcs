@@ -1,0 +1,5 @@
+Parts = parts_new.xpm
+BDigitHeight = 20
+BDigitWidth = 10
+SDigitHeight = 9
+SDigitWidth = 5

@@ -1,0 +1,13 @@
+Source: wmclockmon
+Section: x11
+Priority: optional
+Maintainer: Marc Brockschmidt <marc@dch-faq.de>
+Build-Depends: libglib1.2-dev, libgtk1.2-dev, xlibs-dev (>> 4.1.0), debhelper (>= 3.0.0)
+Standards-Version: 3.6.0
+
+Package: wmclockmon
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Displays a clock in 12/24h mode with alarm mode and 3 different LCD styles
+ wmclockmon displays a clock like wmtime, but with an alarm timer and
+ different styles.

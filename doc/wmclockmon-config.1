@@ -1,0 +1,55 @@
+.TH WMCLOCKMON\-CONFIG "1" "October 2003" "wmclockmon-config " "User Commands"
+
+
+.SH NAME
+wmclockmon\-config \- A program to configure wmclockmon
+
+
+.SH SYNOPSIS
+.B wmclockmon\-config [\-h] [\-v] [\-f configfile]
+
+
+.SH DESCRIPTION
+This manual page documents briefly the
+.B wmclockmon\-config
+command.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
+.\" respectively.
+\fBwmclockmon\-config\fP is a program to control the behaviour of wmclockmon.
+You can change it's style and add alarms.
+Command\-line options override the default configuration file options. But if
+a file is given at command\-line (with the \-f option), its options will
+override those given before.
+
+
+.SH OPTIONS
+This program follows the usual GNU command line syntax, with long options
+starting with two dashes (`\-'). A summary of options is included below.
+.TP
+.B \-h,  \-\-help
+show help text and exit.
+.TP
+.B \-v,  \-\-version
+show program version and exit.
+.TP
+.B \-f,  \-\-cfgfile
+load specified configuration file
+
+
+.SH FILE
+.B wmclockmon\-config
+uses one default file : ~/.wmclockmonrc. Empty lines or lines begining
+with a # are ignored.
+
+
+.SH SEE ALSO
+wmclockmon(1), wmclockmon-cal(1)
+
+
+.SH AUTHOR
+WMClockMon\-config was written by Thomas Nemeth <tnemeth@free.fr>.
+
+This manpage was written by Marc Brockschmidt <marc@dch-faq.de> for the Debian
+GNU/Linux distribution.

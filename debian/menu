@@ -1,0 +1,7 @@
+?package(wmclockmon):\
+ needs=X11\
+ section=Apps/Tools\
+ hints="Clocks"\
+ title="wmclockmon"\
+ command="/usr/bin/wmclockmon"
+

@@ -1,0 +1,21 @@
+wmclockmon (0.5.0-1) unstable; urgency=low
+
+  * New upstream release:
+    - Now supports skins
+    - Now supports internet time
+    - Overall bugfixes
+
+ -- Marc Brockschmidt <marc@dch-faq.de>  Sat, 25 Oct 2003 19:32:10 +0200
+
+wmclockmon (0.2.2-2) unstable; urgency=low
+
+  * Changed Architecture to any - Ooops! (Closes: #207573)
+
+ -- Marc Brockschmidt <marc@dch-faq.de>  Thu, 20 Aug 2003 16:16:54 +0200
+
+wmclockmon (0.2.2-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #202327)
+  * Sponsored by Amaya Rodrigo <amaya@debian.org>.
+
+ -- Marc Brockschmidt <marc@dch-faq.de>  Mon, 21 Jul 2003 21:12:17 +0200

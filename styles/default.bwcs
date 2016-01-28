@@ -1,0 +1,15 @@
+BBacklightOn = backlightB_old_on.xpm
+BBacklightOff = backlightB_old_off.xpm
+Bin_HX = 5
+Bin_HY = 16
+Bin_MX = 23
+Bin_MY = 16
+Bin_SX = 41
+Bin_SY = 16
+Bin_ZX = 6
+Bin_ZY = 6
+Bin_d1X = 0
+Bin_d1Y = 2
+Bin_d2X = 2
+Bin_d2Y = 0
+Bin_IX = -1

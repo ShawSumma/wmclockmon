@@ -1,0 +1,14 @@
+BUGS ?
+
+If you cannot compile wmclockmon-config, it may be beacause you have not
+installed the GTK+ development packages. As I did not made the configure
+script and am not familiar with autoconf and automake stuff, ./configure
+will not look for an installed GTK+ development package.
+
+Be sure you have the gtk-config script in your path.
+
+If, because of that, you do not want wmclockmon-config to be compiled nor
+installed, just don't bother about the error messages for it.
+
+Styles are not automatically installed. I should make a Makefile in that
+order as soon as I know how to do it easyly.

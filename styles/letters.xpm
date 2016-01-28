@@ -1,0 +1,30 @@
+/* XPM */
+static char *letters_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"130 21 3 1",
+"  c #8e968a",
+". c #6ec63b s Back0",
+"X c #020202",
+/* pixels */
+" XXX   X   XXX XXXXX  XX XXXXX XXX XXXXX XXX  XXX .XXX...X...XXX.XXXXX..XX.XXXXX.XXX.XXXXX.XXX..XXX.                              ",
+"X   X XX  X   X    X X X X    X   X    XX   XX   XX...X.XX..X...X....X.X.X.X....X...X....XX...XX...X                              ",
+"X  XXX X      X   X  X X XXXX X       X X   XX   XX..XXX.X......X...X..X.X.XXXX.X.......X.X...XX...X                              ",
+"X X X  X     X   XX X  X X   XXXXX    X  XXX  XXXXX.X.X..X.....X...XX.X..X.X...XXXXX....X..XXX..XXXX                              ",
+"XX  X  X    X      XXXXXX    XX   X  X  X   X    XXX..X..X....X......XXXXXX....XX...X..X..X...X....X                              ",
+"X   X  X   X   X   X   X X   XX   X  X  X   XX   XX...X..X...X...X...X...X.X...XX...X..X..X...XX...X                              ",
+" XXX  XXX XXXXX XXX    X  XXX  XXX  X    XXX  XXX .XXX..XXX.XXXXX.XXX....X..XXX..XXX..X....XXX..XXX.                              ",
+" XXX XXX   XXX XXX  XXXXXXXXXX XXX X   X XXX   XXXX   XX    X   XX   X XXX XXXX  XXX XXXX  XXX XXXXXX   XX   XX   XX   XX   XXXXXX",
+"X   XX  X X   XX  X X    X    X   XX   X  X      XX  X X    XX XXXX  XX   XX   XX   XX   XX   X  X  X   XX   XX   XX   XX   X    X",
+"X   XX  X X    X   XX    X    X    X   X  X      XX X  X    X X XXX  XX   XX   XX   XX   XX      X  X   XX   XX   X X X X   X   X ",
+"XXXXXXXXX X    X   XXXXX XXXX X  XXXXXXX  X      XXX   X    X X XX X XX   XXXXX X   XXXXX  XXX   X  X   X X X X X X  X   XXX   X  ",
+"X   XX   XX    X   XX    X    X   XX   X  X      XX X  X    X   XX  XXX   XX    X   XX X      X  X  X   X X X X X X X X   X   X   ",
+"X   XX   XX   XX  X X    X    X   XX   X  X  X   XX  X X    X   XX  XXX   XX    X X XX  X X   X  X  X   X  X  XX XXX   X  X  X    ",
+"X   XXXXX  XXX XXX  XXXXXX     XXX X   X XXX  XXX X   XXXXXXX   XX   X XXX X     XXX X   X XXX   X   XXX   X  X   XX   X  X  XXXXX",
+".XXX.XXX...XXX.XXX..XXXXXXXXXX.XXX.X...X.XXX...XXXX...XX....X...XX...X.XXX.XXXX..XXX.XXXX..XXX.XXXXXX...XX...XX...XX...XX...XXXXXX",
+"X...XX..X.X...XX..X.X....X....X...XX...X..X......XX..X.X....XX.XXXX..XX...XX...XX...XX...XX...X..X..X...XX...XX...XX...XX...X....X",
+"X...XX..X.X....X...XX....X....X....X...X..X......XX.X..X....X.X.XXX..XX...XX...XX...XX...XX......X..X...XX...XX...X.X.X.X...X...X.",
+"XXXXXXXXX.X....X...XXXXX.XXXX.X..XXXXXXX..X......XXX...X....X.X.XX.X.XX...XXXXX.X...XXXXX..XXX...X..X...X.X.X.X.X.X..X...XXX...X..",
+"X...XX...XX....X...XX....X....X...XX...X..X......XX.X..X....X...XX..XXX...XX....X...XX.X......X..X..X...X.X.X.X.X.X.X.X...X...X...",
+"X...XX...XX...XX..X.X....X....X...XX...X..X..X...XX..X.X....X...XX..XXX...XX....X.X.XX..X.X...X..X..X...X..X..XX.XXX...X..X..X....",
+"X...XXXXX..XXX.XXX..XXXXXX.....XXX.X...X.XXX..XXX.X...XXXXXXX...XX...X.XXX.X.....XXX.X...X.XXX...X...XXX...X..X...XX...X..X..XXXXX"
+};

@@ -1,0 +1,79 @@
+# Configuration file for wmclockmon
+# empty lines or lines begining with # are ignored
+# booleans can take the next values : 0 1 true false yes no on off
+# and are case insensitive
+
+# Backlight : boolean
+# Default : Off
+#
+Backlight = On
+
+# Color : string (backlight color when backlight is ON)
+# Default : #6ec63b
+#
+Color = 
+
+# StyleDir : string (name of styles directory)
+# Default : nothing
+#
+StyleDir = /usr/local/share/wmclockmon
+
+# Style : string (name of style -- without extension)
+# Default : nothing
+#
+Style = 
+
+# H12 : boolean (12 hour clock)
+# Default : false
+H12 = False
+
+# TimeMode : integer (0: normal clock, 1: internet time, 2: binary clock)
+# Default : 0
+TimeMode = 0
+
+# Locale : boolean (use current locale or not)
+# Default : yes
+Locale = Yes
+
+# Command : string (what to do when alarm raises)
+# Default : nothing
+#
+Command = 
+
+# MessageCmd : string (what to do when alarm raises and there is a message)
+# Default : nothing
+#
+MessageCmd = ogg123 -d esd -q
+
+# Blinking enable : boolean
+# Default : yes
+#
+Blink = Yes
+
+# ShowCal : boolean (display calendar at startup / 00:00)
+# Default : no
+#
+ShowCal = no
+
+# CalAlrms : boolean (look for alarms in calendar for today -- see manpage)
+# Default : off
+#
+CalAlrms = on
+
+# Alarm : string ([on|off@]HH:MM[-#DAY][.MESSAGE])
+# Default : nothing
+#   on|off  is the boolean describing the state of the alarm
+#   @       is the field separator between status and hour - DON'T PUT SPACES
+#   HH:MM   is the time when you want the alarm to be raised
+#   -       is the field separator between time and day - DON'T PUT SPACES
+#   #DAY    is the day of the week (1-7)
+#   .       is the field separator between time or day and the message
+#   MESSAGE is the message you wantto be displayed (see MessageCmd) when this
+#           alarm raises
+#
+# use as many Alarm options as you want alarms
+#
+Alarm = On@19:55./home/thomas/documents/sons/alarm.ogg
+Alarm = On@13:30-7./home/thomas/documents/sons/warning.ogg
+Alarm = On@07:00
+

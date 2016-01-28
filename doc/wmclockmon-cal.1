@@ -1,0 +1,54 @@
+.TH WMCLOCKMON\-CAL "1" "February 2004" "wmclockmon-cal " "User Commands"
+
+
+.SH NAME
+wmclockmon\-cal \- A calendar to use with wmclockmon
+
+
+.SH SYNOPSIS
+.B wmclockmon\-cal [\-h] [\-v]
+
+
+.SH DESCRIPTION
+This manual page documents briefly the
+.B wmclockmon\-cal
+command.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
+.\" respectively.
+\fBwmclockmon\-cal\fP is a program that displays a calendar and TODO list
+with wmclockmon.
+.PP
+A calendar/TODO list can contain special lines that will be taken as alarms
+for \fBwmclockmon\fP. An alarm line MUST begin with an @, then contain the time
+(hours and minutes un 24h format) and, at least, the message, such as :
+.TP
+@ 09:20 Prepare for RDV hairdresser at 9:30...
+
+
+.SH OPTIONS
+This program follows the usual GNU command line syntax, with long options
+starting with two dashes (`\-'). A summary of options is included below.
+.TP
+.B \-h,  \-\-help
+show help text and exit.
+.TP
+.B \-v,  \-\-version
+show program version and exit.
+
+
+.SH FILE
+.B wmclockmon\-cal
+uses files in ~/.wmclockmoncal/. Each file contain a day's TODO list. Calendar
+files are all in form of yyyy-mm-dd. Yearly files are in form of XXXX-mm-dd
+and monthly files are in form of XXXX-XX-dd. There are currently no weekly
+files since weekly alarms are in wmclockmon's configuration file.
+
+
+.SH SEE ALSO
+wmclockmon(1), wmclockmon-config(1)
+
+
+.SH AUTHOR
+WMClockMon\-cal was written by Thomas Nemeth <tnemeth@free.fr>.
