@@ -1,0 +1,44 @@
+Description: Check whether memory has been allocated before freeing.
+ Two strings, command and light_color, were always freed even though they
+ were only conditionally allocated.  This could cause "munmap_chunk(): invalid
+ pointer" errors.  We fix this by keeping track of whether they have been
+ allocated and only freeing if they have.
+Author: Doug Torrance <dtorrance@piedmont.edu>
+Last-Update: 2016-02-16
+
+--- a/wmclockmon-config/actions.c
++++ b/wmclockmon-config/actions.c
+@@ -21,9 +21,11 @@
+ 
+ 
+ void quit_app() {
+-    FREE(command);
++    if (free_command)
++        FREE(command);
+     FREE(config_file);
+-    FREE(light_color);
++    if (free_light_color)
++	FREE(light_color);
+     free_alrm(&alarms);
+     gtk_main_quit();
+ }
+--- a/wmclockmon-config/tools.c
++++ b/wmclockmon-config/tools.c
+@@ -139,6 +139,7 @@
+             printf("Unable to open configuration file \"%s\".\n", config_file);
+         return;
+     }
++    free_light_color = free_command = 0;
+     while (! feof(file)) {
+         memset(line, 0, MAXSTRLEN + 1);
+         fgets(line, MAXSTRLEN, file);
+--- a/wmclockmon-config/variables.h
++++ b/wmclockmon-config/variables.h
+@@ -22,5 +22,7 @@
+ char  *command;
+ char  *msgcmd;
+ Alarm *alarms;
++int    free_light_color;
++int    free_command;
+ 
+ #endif

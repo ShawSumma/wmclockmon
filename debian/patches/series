@@ -2,3 +2,4 @@ kfreebsd_build.patch
 update_autotools.patch
 build_against_gtk2.patch
 fix_typos.patch
+check_free.patch
