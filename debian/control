@@ -14,8 +14,8 @@ Build-Depends: debhelper (>= 9),
                pkg-config
 Standards-Version: 3.9.7
 Homepage: http://tnemeth.free.fr/projets/dockapps.html
-Vcs-Browser: https://anonscm.debian.org/git/pkg-wmaker/wmclockmon.git
-Vcs-Git: https://anonscm.debian.org/git/pkg-wmaker/wmclockmon.git
+Vcs-Browser: https://salsa.debian.org/wmaker-team/wmclockmon
+Vcs-Git: https://salsa.debian.org/wmaker-team/wmclockmon.git
 
 Package: wmclockmon
 Architecture: any
