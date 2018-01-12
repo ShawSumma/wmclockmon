@@ -2,6 +2,7 @@ wmclockmon (0.8.1-4) UNRELEASED; urgency=medium
 
   * Update Vcs-* after migration to Salsa.
   * Update Format in d/copyright to https.
+  * Bump Standards-Version to 4.1.3.
 
  -- Doug Torrance <dtorrance@piedmont.edu>  Wed, 10 Jan 2018 14:45:58 -0500
 
