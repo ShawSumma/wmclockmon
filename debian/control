@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Window Maker Team <pkg-wmaker-devel@lists.alioth.debian.org>
 Uploaders: Doug Torrance <dtorrance@piedmont.edu>,
            Jeremy Sowden <jeremy@azazel.net>
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper-compat (= 13),
                dh-autoreconf,
                libgtk2.0-dev,
                libx11-dev,
