@@ -1,10 +1,21 @@
-wmclockmon (0.8.1-4) UNRELEASED; urgency=medium
+wmclockmon (0.8.1-4) unstable; urgency=medium
 
+  [ Doug Torrance ]
   * Update Vcs-* after migration to Salsa.
   * Update Format in d/copyright to https.
-  * Bump Standards-Version to 4.1.3.
 
- -- Doug Torrance <dtorrance@piedmont.edu>  Wed, 10 Jan 2018 14:45:58 -0500
+  [ Jeremy Sowden ]
+  * Add myself to uploaders.
+  * Bump Standards-Version to 4.5.0.
+  * Bump compat to 13 and replace d/compat with b-d on debhelper-compat.
+  * No more need to require dh-autoreconf explicitly.
+  * Set Rules-Requires-Root: no.
+  * Resolve a few differences from upstream and update GTK build patch
+    accordingly in order to get gbp working.
+  * Fix check_free.patch.
+  * Add patch to fix gcc-10 FTBFS (closes: #957943).
+
+ -- Jeremy Sowden <jeremy@azazel.net>  Thu, 14 May 2020 11:37:47 +0100
 
 wmclockmon (0.8.1-3) unstable; urgency=medium
 
