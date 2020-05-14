@@ -12,6 +12,7 @@ Build-Depends: debhelper-compat (= 13),
                libxpm-dev,
                libxt-dev,
                pkg-config
+Rules-Requires-Root: no
 Standards-Version: 4.5.0
 Homepage: http://tnemeth.free.fr/projets/dockapps.html
 Vcs-Browser: https://salsa.debian.org/wmaker-team/wmclockmon
