@@ -10,12 +10,10 @@ wmclockmon (0.8.1-4) unstable; urgency=medium
   * Bump compat to 13 and replace d/compat with b-d on debhelper-compat.
   * No more need to require dh-autoreconf explicitly.
   * Set Rules-Requires-Root: no.
-  * Resolve a few differences from upstream and update GTK build patch
-    accordingly in order to get gbp working.
   * Fix check_free.patch.
   * Add patch to fix gcc-10 FTBFS (closes: #957943).
 
- -- Jeremy Sowden <jeremy@azazel.net>  Thu, 14 May 2020 11:37:47 +0100
+ -- Jeremy Sowden <jeremy@azazel.net>  Fri, 15 May 2020 09:01:13 +0100
 
 wmclockmon (0.8.1-3) unstable; urgency=medium
 
