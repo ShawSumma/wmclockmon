@@ -4,3 +4,4 @@ build_against_gtk2.patch
 fix_typos.patch
 check_free.patch
 add_extern.patch
+fix_leaks.patch
