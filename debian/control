@@ -1,7 +1,7 @@
 Source: wmclockmon
 Section: x11
 Priority: optional
-Maintainer: Debian Window Maker Team <pkg-wmaker-devel@lists.alioth.debian.org>
+Maintainer: Debian Window Maker Team <team+wmaker@tracker.debian.org>
 Uploaders: Doug Torrance <dtorrance@piedmont.edu>,
            Jeremy Sowden <jeremy@azazel.net>
 Build-Depends: debhelper-compat (= 13),
