@@ -8,12 +8,12 @@ License: GPL-2+
 
 Files: src/dockapp.*
 Copyright: 1999 Alfredo K. Kojima
-	   2001, 2002 Seiichi SATO <ssato@sh.rim.or.jp>
+           2001, 2002 Seiichi SATO <ssato@sh.rim.or.jp>
 License: Expat
 
 Files: debian/*
 Copyright: 2003 Marc Brockschmidt <marc@dch-faq.de>
-	   2016 Doug Torrance <dtorrance@piedmont.edu>
+           2016 Doug Torrance <dtorrance@piedmont.edu>
 License: GPL-2+
 
 License: GPL-2+
