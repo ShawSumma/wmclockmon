@@ -1,6 +1,7 @@
 wmclockmon (0.8.1-5) UNRELEASED; urgency=medium
 
   * debian/copyright: use spaces rather than tabs to start continuation lines.
+  * Fix day-of-week for changelog entry 0.2.2-2.
 
  -- Debian Janitor <janitor@jelmer.uk>  Fri, 03 Sep 2021 17:52:47 -0000
 
@@ -150,7 +151,7 @@ wmclockmon (0.2.2-2) unstable; urgency=low
 
   * Changed Architecture to any - Ooops! (Closes: #207573)
 
- -- Marc Brockschmidt <marc@dch-faq.de>  Thu, 20 Aug 2003 16:16:54 +0200
+ -- Marc Brockschmidt <marc@dch-faq.de>  Wed, 20 Aug 2003 16:16:54 +0200
 
 wmclockmon (0.2.2-1) unstable; urgency=low
 
