@@ -1,4 +1,4 @@
-wmclockmon (0.8.1-5) UNRELEASED; urgency=medium
+wmclockmon (0.8.1-5) unstable; urgency=medium
 
   [ Debian Janitor ]
   * debian/changelog
@@ -17,7 +17,7 @@ wmclockmon (0.8.1-5) UNRELEASED; urgency=medium
   * debian/salsa-ci.yml
     - Add Salsa pipeline config file.
 
- -- Doug Torrance <dtorrance@piedmont.edu>  Sun, 24 Oct 2021 17:43:34 -0400
+ -- Doug Torrance <dtorrance@piedmont.edu>  Sun, 24 Oct 2021 18:06:24 -0400
 
 wmclockmon (0.8.1-4) unstable; urgency=medium
 
