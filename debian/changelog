@@ -1,9 +1,23 @@
 wmclockmon (0.8.1-5) UNRELEASED; urgency=medium
 
-  * debian/copyright: use spaces rather than tabs to start continuation lines.
-  * Fix day-of-week for changelog entry 0.2.2-2.
+  [ Debian Janitor ]
+  * debian/changelog
+    - Fix day-of-week for changelog entry 0.2.2-2.
+  * debian/copyright
+    - Use spaces rather than tabs to start continuation lines.
 
- -- Debian Janitor <janitor@jelmer.uk>  Fri, 03 Sep 2021 17:52:47 -0000
+  [ Doug Torrance ]
+  * debian/control
+    - Update Maintainer email to use tracker.d.o.
+    - Bump Standards-Version to 4.6.0.
+  * debian/copyright
+    - Update my copyright years.
+  * debian/menu
+    - Remove deprecated menu file.
+  * debian/salsa-ci.yml
+    - Add Salsa pipeline config file.
+
+ -- Doug Torrance <dtorrance@piedmont.edu>  Sun, 24 Oct 2021 17:43:34 -0400
 
 wmclockmon (0.8.1-4) unstable; urgency=medium
 
